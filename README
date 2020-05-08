@@ -1,3 +1,12 @@
+MODIFIED GLIBC FOR PARLA ISOLATED RUNTIMES
+
+See NOTES in this directory for an outline of how this can be built
+for Parla purposes. To use the built library see
+Parla.py/runtime_libs/usingldso
+
+-----------------------------------------------------------------------
+
+
 This directory contains the sources of the GNU C Library.
 See the file "version.h" for what release version you have.
 

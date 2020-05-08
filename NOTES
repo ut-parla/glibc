@@ -1,0 +1,17 @@
+To build glibc for use on Ubuntu 19.10 (and other modern distributions too, most likely), use a configure command
+similar to this:
+
+CC="x86_64-linux-gnu-gcc-8 -no-pie -fno-PIE" CXX="x86_64-linux-gnu-g++-8 -no-pie -fno-PIE" MIG="x86_64-linux-gnu-mig" \
+  AUTOCONF=false MAKEINFO=: \
+  [PATH TO glibc]/configure \
+  --host=x86_64-linux-gnu \
+  --prefix=$HOME/hacked-libc \
+  --enable-add-ons=libidn,"" \
+  --without-selinux \
+  --enable-stackguard-randomization \
+  --enable-stack-protector=strong \
+  --enable-obsolete-rpc \
+  --enable-obsolete-nsl \
+  --enable-kernel=3.2 --with-selinux --enable-systemtap --enable-multi-arch --enable-static-pie
+
+Make sure to build out-of-tree.
