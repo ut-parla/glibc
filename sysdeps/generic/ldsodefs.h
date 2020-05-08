@@ -296,7 +296,7 @@ struct rtld_global
 
 /* Non-shared code has no support for multiple namespaces.  */
 #ifdef SHARED
-# define DL_NNS 16
+# define DL_NNS 31
 #else
 # define DL_NNS 1
 #endif
